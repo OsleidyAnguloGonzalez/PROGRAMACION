@@ -337,7 +337,15 @@ ul.conat_info li a:hover {
      min-height: 1150px;
      background-position: right top;
 }
-
+.boton {
+     background-color: #3175da; /* Color verde */
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+ }
 .text-bg {
      margin-top: 70px;
      text-align: left;
@@ -527,9 +535,11 @@ ul.conat_info li a:hover {
 /** service section **/
 
 .service {
-     background-color: #f7f7f9;
-     margin-top: 80px;
-     padding: 90px 0;
+    background-color: #f7f7f9;
+    margin-top: 80px;
+    padding: 90px 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .service .titlepage {
@@ -550,9 +560,12 @@ ul.conat_info li a:hover {
 }
 
 .service_box {
-     text-align: center;
-     width: 16.3%;
-     margin-top: 30px !important;
+    text-align: center;
+    width: 16.3%;
+    margin-top: 30px !important;
+    justify-content: center;
+    align-items: center;
+    display: grid;
 }
 
 .service_box i {

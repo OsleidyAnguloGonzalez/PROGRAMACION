@@ -1,0 +1,76 @@
+/* Estilos generales */
+
+body {
+  
+  background: rgb(30, 154, 211);
+  font-family: 'Poppins', sans-serif;
+  color: #666666;
+     font-size: 14px;
+     line-height: 1.80857;
+     font-weight: normal;
+  
+}
+
+/* Contenedor global */
+.global-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+}
+
+/* Tarjeta de login */
+.card.login-form {
+  width: 350px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgb(4, 10, 92);
+}
+
+/* Título */
+.card-title {
+  display: grid;
+  place-content: center;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: #003cffc7;
+}
+
+/* Formulario */
+form {
+  margin-top: 20px;
+}
+
+/* Campo de entrada */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Botón de submit */
+.btn-primary {
+  text-align: center;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+/* Enlace "Forgot password?" */
+a {
+  display: grid;
+  place-content: center;
+  color: #007bff;
+  text-decoration: none;
+}
+
+/* Enlace "Create One" */
+.sign-up {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Responsividad (opcional) */
+@media (max-width: 768px) {
+  .card.login-form {
+    width: 95%;
+  }
+}
