@@ -18,8 +18,6 @@
       <link rel="stylesheet" href="css/style.css">
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
       <!-- Scrollbar Custom CSS -->
       <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
       <!-- Tweaks for older IEs-->
@@ -33,11 +31,15 @@
    <body class="main-layout">
       <!-- loader  -->
       <div class="loader_bg">
-         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+         <div class="loader"><img src="images/12.gif" alt="#" /></div>
       </div>
+      
+      
+ 
       <!-- end loader -->
       <div id="mySidepanel" class="sidepanel">
          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="formulario.html">Crear una cuenta </a>
          <a href="index.html">Principal </a>
          <a href="#about">Empleos</a>
          <a href="#service">Busco Empleo</a>
@@ -53,9 +55,11 @@
                <div class="row">
                   <div class="col-md-4 col-sm-4">
                      <div class="logo">
+                        
                         <a href="index.html"><img src="images/logo.png" alt="#" /></a>
                      </div>
                   </div>
+                  
                   <div class="col-md-8 col-sm-8">
                      <div class="right_bottun">
                         <ul class="conat_info d_none ">
@@ -72,7 +76,7 @@
       <!-- end header inner -->
       <!-- end header -->
       <!-- banner -->
- <section class="banner_main">
+      <section class="banner_main">
          <div id="banner1" class="carousel slide banner_slide" data-ride="carousel">
             <ol class="carousel-indicators">
                <li data-target="#banner1" data-slide-to="0" class="active"></li>
@@ -87,9 +91,9 @@
                            <div class="col-md-7 col-lg-5">
                               <div class="text-bg">
                                  <h1>Encuentra Empleo</h1>
-                                  <span>La mejor plataforma para conseguir empleos del pais</span>
-                                    <h3>Obtenga atencion personalizada</h3>
-                                      <a class="read_more" href="#contact">Contactanos</a>
+                                  <span>La mejor plataforma para conseguir empleos del pais, contamos con  mas de 400 opciones de empleo para ti.</span>
+                                    <h3>Consigue tu empleo ideal</h3>
+                                    <link rel="stylesheet" href="estilos.css"> <a href="formulario.html" class="boton">Suscribirse</a>
                               </div>
                            </div>
                            <div class="col-md-12 col-lg-7">
@@ -100,24 +104,45 @@
                                     </div>
                                  </div>
                                  <div class="col-md-6">
-                                    <form class="transfot">
+                                    <form class="transfot" id="contactForm"> 
                                        <div class="col-md-12">
-                                    <span>Para persona</span>
-                                          <input class="transfot_form" placeholder="Nombres y apellidos" type="text" name="Nombres y apellidos">
+                                           <span>Para persona</span><br>
+                                           <input class="transfot_form" placeholder="Nombres y apellidos" type="text" name="Nombres y apellidos">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="Residencia" type="text" name="Residencia">
+                                           <input class="transfot_form" placeholder="Residencia" type="text" name="Residencia">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="Correo" type="text" name="Correo">
+                                           <input class="transfot_form" placeholder="Correo" type="text" name="Correo">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="Numero de Contacto" type="text" name="Numero de Contacto">
+                                           <input class="transfot_form" placeholder="Numero de Contacto" type="text" name="Numero de Contacto">
                                        </div>
                                        <div class="col-md-12">
-                                          <button class="get_now">Atencion Personalizada</button>
+                                           <button type="button" class="get_now" onclick="enviarFormulario()">Atención Personalizada</button>
                                        </div>
-                                    </form>
+                                   </form>
+                                    <script>
+                                       function enviarFormulario() {
+                                           // Obtener los valores de los campos del formulario
+                                           var nombre = document.getElementsByName('Nombres y apellidos')[0].value;
+                                           var residencia = document.getElementsByName('Residencia')[0].value;
+                                           var correo = document.getElementsByName('Correo')[0].value;
+                                           var telefono = document.getElementsByName('Numero de Contacto')[0].value;
+                                   
+                                           // Crear el cuerpo del correo electrónico
+                                           var cuerpoCorreo = "Nombre: " + nombre + "\n" +
+                                                              "Residencia: " + residencia + "\n" +
+                                                              "Correo: " + correo + "\n" +
+                                                              "Teléfono: " + telefono;
+                                   
+                                           // Configurar el correo electrónico
+                                           var mailtoLink = "mailto:redempvzla.com?subject=Solicitud de Atención Personalizada&body=" + encodeURIComponent(cuerpoCorreo);
+                                   
+                                           // Redireccionar al cliente de correo electrónico
+                                           window.location.href = mailtoLink;
+                                       }
+                                   </script>
                                  </div>
                               </div>
                            </div>
@@ -132,39 +157,59 @@
                            <div class="col-md-7 col-lg-5">
                               <div class="text-bg">
                                  <h1>Consigue Empleados</h1>
-                                 <span>Contrary to popular belief, Lorem Ipsum is not simply random text. It has i</span>
-                                 <a class="read_more" href="#">Contact Us</a>
+                                 <span>Con esta plataforma encontraras miles de personas dispuestas a encontrar un empleo em las distintas areas de trabjo </span>
+                                 <link rel="stylesheet" href="estilos.css"> <a href="formulario.html" class="boton">Suscribirse</a>
                               </div>
                            </div>
                            <div class="col-md-12 col-lg-7">
                               <div class="row">
                                  <div class="col-md-6">
                                     <div class="ban_track">
-                                       <figure><img src="images/track.png" alt="#"/></figure>
+                                       <figure><img src="images/empresa.png" alt="#"/></figure>
                                     </div>
                                  </div>
                                  <div class="col-md-6">
-                                    <form class="transfot">
+                                    <form class="transfot" id="contactForm">
                                        <div class="col-md-12">
-                                          <span>Professional Services</span>
-                                          <h3>Get your transport quote</h3>
+                                           <span>Para empresa</span><br>
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="Location" type="text" name="Location">
+                                           <input class="transfot_form" placeholder="Nombre de la empresa" type="text" name="nombre_empresa">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="To destination" type="text" name="To destination">
+                                           <input class="transfot_form" placeholder="Ubicacion" type="text" name="ubicacion">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="Email" type="text" name="Email">
+                                           <input class="transfot_form" placeholder="Correo Electronico" type="text" name="correo_electronico">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="Contact Number" type="text" name="Contact Number">
+                                           <input class="transfot_form" placeholder="Numero de contacto" type="text" name="numero_contacto">
                                        </div>
                                        <div class="col-md-12">
-                                          <button class="get_now">Get Now quote</button>
+                                           <button type="button" class="get_now" onclick="enviarFormulario()">Atencion personalizada</button>
                                        </div>
-                                    </form>
+                                   </form>
+                                   <script>
+                                    function enviarFormulario() {
+                                        // Obtener los valores de los campos del formulario
+                                        var nombreEmpresa = document.getElementsByName('nombre_empresa')[0].value;
+                                        var ubicacion = document.getElementsByName('ubicacion')[0].value;
+                                        var correoElectronico = document.getElementsByName('correo_electronico')[0].value;
+                                        var numeroContacto = document.getElementsByName('numero_contacto')[0].value;
+                                
+                                        // Crear el cuerpo del correo electrónico
+                                        var cuerpoCorreo = "Nombre de la empresa: " + nombreEmpresa + "\n" +
+                                                           "Ubicación: " + ubicacion + "\n" +
+                                                           "Correo Electrónico: " + correoElectronico + "\n" +
+                                                           "Número de contacto: " + numeroContacto;
+                                
+                                        // Configurar el correo electrónico
+                                        var mailtoLink = "mailto:redempvzla.com?subject=Solicitud de atención&body=" + encodeURIComponent(cuerpoCorreo);
+                                
+                                        // Redireccionar al cliente de correo electrónico
+                                        window.location.href = mailtoLink;
+                                    }
+                                </script>
                                  </div>
                               </div>
                            </div>
@@ -178,40 +223,57 @@
                         <div class="row">
                            <div class="col-md-7 col-lg-5">
                               <div class="text-bg">
-                                 <h1>Consigue Empleo</h1>
-                                 <span>Contrary to popular belief, Lorem Ipsum is not simply random text. It has i</span>
-                                 <a class="read_more" href="#">Contact Us</a>
+                                 <h1>Se parte de nuestro equipo</h1>
+                                 <span>Si te gustaria ser parte de nuestro gran equipo trabajndo desde casa esta es tu oportunidad, solo debes llenar el formulario y un asesor estara contactandose contigo.</span>
                               </div>
                            </div>
                            <div class="col-md-12 col-lg-7">
                               <div class="row">
                                  <div class="col-md-6">
                                     <div class="ban_track">
-                                       <figure><img src="images/track.png" alt="#"/></figure>
+                                       <figure><img src="images/chamba.png" alt="#"/></figure>
                                     </div>
                                  </div>
                                  <div class="col-md-6">
-                                    <form class="transfot">
+                                    <form class="transfot" id="contactForm"> 
                                        <div class="col-md-12">
-                                          <span>Professional Services</span>
-                                          <h3>Get your transport quote</h3>
+                                           <span>Para persona</span><br>
+                                           <input class="transfot_form" placeholder="Nombres y apellidos" type="text" name="Nombres y apellidos">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="Location" type="text" name="Location">
+                                           <input class="transfot_form" placeholder="Residencia" type="text" name="Residencia">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="To destination" type="text" name="To destination">
+                                           <input class="transfot_form" placeholder="Correo" type="text" name="Correo">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="Email" type="text" name="Email">
+                                           <input class="transfot_form" placeholder="Numero de Contacto" type="text" name="Numero de Contacto">
                                        </div>
                                        <div class="col-md-12">
-                                          <input class="transfot_form" placeholder="Contact Number" type="text" name="Contact Number">
+                                           <button type="button" class="get_now" onclick="enviarFormulario()">Atención Personalizada</button>
                                        </div>
-                                       <div class="col-md-12">
-                                          <button class="get_now">Get Now quote</button>
-                                       </div>
-                                    </form>
+                                   </form>
+                                    <script>
+                                       function enviarFormulario() {
+                                           // Obtener los valores de los campos del formulario
+                                           var nombre = document.getElementsByName('Nombres y apellidos')[0].value;
+                                           var residencia = document.getElementsByName('Residencia')[0].value;
+                                           var correo = document.getElementsByName('Correo')[0].value;
+                                           var telefono = document.getElementsByName('Numero de Contacto')[0].value;
+                                   
+                                           // Crear el cuerpo del correo electrónico
+                                           var cuerpoCorreo = "Nombre: " + nombre + "\n" +
+                                                              "Residencia: " + residencia + "\n" +
+                                                              "Correo: " + correo + "\n" +
+                                                              "Teléfono: " + telefono;
+                                   
+                                           // Configurar el correo electrónico
+                                           var mailtoLink = "mailto:redempvzla.com?subject=Solicitud de Atención Personalizada&body=" + encodeURIComponent(cuerpoCorreo);
+                                   
+                                           // Redireccionar al cliente de correo electrónico
+                                           window.location.href = mailtoLink;
+                                       }
+                                   </script>
                                  </div>
                               </div>
                            </div>
@@ -235,12 +297,62 @@
             <div class="row d_flex">
                <div class="col-md-6">
                   <div class="about_right">
-                     <figure><img src="images/about.png" alt="#"/></figure>
+                     <figure><img src="images/mc.png" alt="#"/></figure>
                   </div>
                </div>
                <div class="col-md-6">
                   <div class="titlepage">
-                     <h2>About Us</h2>
+                     <h2>Solicita Cocinero</h2>
+                     <p> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, There 
+                     </p>
+                     <a class="read_more" href="#">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </br>
+   </br>
+</br>
+ </br>
+</br>
+</br>
+ </br>
+      </div><div id="about" class="about ">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-6">
+                  <div class="about_right">
+                     <figure><img src="images/lg.png" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="titlepage">
+                     <h2>Busca Creador de Contenido</h2>
+                     <p> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, There 
+                     </p>
+                     <a class="read_more" href="#">Read More</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </br>
+   </br>
+</br>
+ </br>
+</br>
+</br>
+ </br>
+      </div><div id="about" class="about ">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-6">
+                  <div class="about_right">
+                     <figure><img src="images/ad.png" alt="#"/></figure>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="titlepage">
+                     <h2>Requiere Vendedor</h2>
                      <p> There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, There 
                      </p>
                      <a class="read_more" href="#">Read More</a>
